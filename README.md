@@ -3,8 +3,8 @@ A simple bank web app.
 
 # How to Install and Run
 1. Install [Go](https://go.dev/).
-2. Clone the repository.
-3. Go to the directory you downloaded the project and download the dependencies.
+2. Download the release.
+3. Go to the project directory and download the dependencies.
 ```
 go mod download
 ```
