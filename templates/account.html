@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bank</title>
+        <link rel="stylesheet" type = "text/css" href="/static/bank.css">
+    </head>
+    <body>
+        <div class="banner">Bank</div>
+        <div id="container">
+            <span class="username">{{.Username}}</span>
+            <div class="balance-info">
+                <span id="current-balance">${{.Balance}}</span>
+                <span class="balance-text">Current balance</span>
+            </div>
+            <div id="status"></div>
+            <form id="transaction-form" action="/transaction" method="post">
+                <label for="amount">
+                    <span class="dollar-sign">$ </span> 
+                    <input class="amount-input" type="text" name="amount" id="amount" required>
+                </label>
+                <button class="deposit-button" name="type" value="deposit">Deposit</button>
+                <button class="withdraw-button" name="type" value="withdraw">Withdraw</button>
+            </form>
+        </div>
+        <form id="logout-form" action="/logout" method="post">
+            <button class="logout-button">Logout</button>
+        </form>
+        <script src="/static/bank.js"></script>
+    </body>
+</html>

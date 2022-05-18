@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+.banner {
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 0.5em auto;
+}
+
+#container {
+    padding: 2em 2em 1em 2em;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.username {
+    display: inline-block;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container form input {
+    margin: 0.5em auto;
+    padding: 0.5em;
+    width: 400px;
+}
+
+.login-button, .signup-button {
+    background: #4287F5;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    width: 250px;
+    margin: 1em auto;
+    padding: 0.5em;
+}
+
+.deposit-button, .withdraw-button {
+    width: 250px;
+    margin: 0.5em auto;
+    padding: 0.5em;
+    background: #4287F5;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.login-button:hover, .signup-button:hover, .deposit-button:hover, .withdraw-button:hover {
+    background-color: #3972D4;
+}
+
+.signup {
+    text-decoration: none;
+}
+
+.signup:hover {
+    text-decoration: underline;
+}
+
+#container .amount-input {
+    width: 200px;
+    font-size: 1em;
+    padding: 0;
+}
+
+.balance-info {
+    display: flex;
+    flex-direction: column;
+    margin: 1em auto 0.5em auto;
+}
+
+#current-balance {
+    font-size: xx-large;
+}
+
+.balance-text {
+    color: gray;
+}
+
+.dollar-sign {
+    font-size: large;
+}
+
+.logout-button {
+    width: 250px;
+    margin: 2em auto;
+    padding: 0.5em;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.logout-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,15 @@
+# bank
+A simple bank web app.
+
+# How to Install and Run
+1. Install [Go](https://go.dev/).
+2. Clone the repository.
+3. Go to the directory you downloaded the project and download the dependencies.
+```
+go mod download
+```
+4. Run the app.
+```
+go run main.go
+```
+5. Go to http://localhost:8000/. You can stop the server by pressing Ctrl+C in the terminal.

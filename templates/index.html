@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bank</title>
+        <link rel="stylesheet" type ="text/css" href="/static/bank.css">
+    </head>
+    <body>
+        <div class="banner">Bank</div>
+        <div id="container">
+            <div id="status"></div>
+            <form id="login-form" action="/login" method="post">
+                <input type="text" name="username" id="username" placeholder="Username" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <button class="login-button">Sign In</button>
+            </form>
+            <span>Need an account? <a href="/signup" class="signup">Sign Up</a></span>
+        </div>
+        <script src="/static/bank.js"></script>
+    </body>
+</html>
