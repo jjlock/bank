@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/jjlock/bank/currency"
-	"github.com/jjlock/bank/validate"
+	"github.com/jjlock/bank/server/currency"
+	"github.com/jjlock/bank/server/validate"
 	"golang.org/x/crypto/bcrypt"
 )
 

@@ -7,7 +7,7 @@ import (
 
 	"github.com/gorilla/securecookie"
 	"github.com/gorilla/sessions"
-	"github.com/jjlock/bank/validate"
+	"github.com/jjlock/bank/server/validate"
 )
 
 type sessionStore interface {
