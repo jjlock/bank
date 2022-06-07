@@ -64,11 +64,11 @@ body {
     background-color: #3972D4;
 }
 
-.signup {
+span a {
     text-decoration: none;
 }
 
-.signup:hover {
+span a:hover {
     text-decoration: underline;
 }
 
