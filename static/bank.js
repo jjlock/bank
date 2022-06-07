@@ -61,7 +61,10 @@ function handleLoginResponse(response) {
     const returnTo = (new URL(window.location)).searchParams.get('return_to');
     if (returnTo !== null) {
         try {
-            redirect = decodeURI(returnTo);
+            const decoded = decodeURI(returnTo);
+            if (isValidRedirect(decoded)) {
+                redirect = decoded;
+            }
         } catch (error) {
             console.log(error);
         }
@@ -97,6 +100,12 @@ function initLogout() {
         fetch('/logout', {method: 'POST'});
         window.location.replace('/');
     });
+}
+
+function isValidRedirect(url) {
+    const whitelist = new Set(['http://localhost:8000/account']);
+    
+    return whitelist.has(url);
 }
 
 init();
