@@ -87,19 +87,19 @@ func (s *server) SignupHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		// create the session
-		err = s.session.create(w, r, username)
-		if err != nil {
-			log.Println("Failed to create session:", err)
-			http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
-			return
-		}
-
 		// add user account to database
 		err = s.db.AddAccount(username, password, balance)
 		if err != nil {
 			log.Println("Failed signup:", err)
 			http.Error(w, "Invalid info", http.StatusBadRequest)
+			return
+		}
+
+		// create the session
+		err = s.session.create(w, r, username)
+		if err != nil {
+			log.Println("Failed to create session:", err)
+			http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 			return
 		}
 
